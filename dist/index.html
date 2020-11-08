@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+
+<body class="h-screen bg-gray-100 h-full">
+    <header class="bg-blue-700 h-16">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold text-center md:text-left text-white pt-2">
+                <i class="fas fa-book-open text-orange-300"></i>
+                Book List
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <!-- Form section-->
+        <section class="py-12">
+            <div id="form-wrapper" class="container mx-auto px-4">
+                <h1 class="text-2xl font-semibold">Add book:</h1>
+                <div class="flex flex-col items-center">
+                    <form id="book-form" class="w-full lg:w-6/12 px-4">
+                        <div class="w-full mb-3 mt-8">
+                            <label class="form-label" for="title">
+                                Title</label><input id="title" type="text" class="form-control placeholder-gray-400"
+                                placeholder="Book title" />
+                        </div>
+                        <div class="w-full mb-3 mt-8">
+                            <label class="form-label" for="author">
+                                Author</label><input id="author" type="text" class="form-control placeholder-gray-400"
+                                placeholder="Book author" />
+                        </div>
+                        <div class="w-full mb-3 mt-8">
+                            <label class="form-label" for="isbn">
+                                ISBN#</label><input id="isbn" type="text" class="form-control placeholder-gray-400"
+                                placeholder="Book isbn code" />
+                        </div>
+                        <div class="text-right mt-6">
+                            <input value="Add book"
+                                   class="bg-blue-700 text-white cursor-pointer text-sm font-bold uppercase px-6 py-3 rounded shadow outline-none"
+                                   type="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table section -->
+        <section>
+            <div class="container mx-auto px-4">
+                <h1 class="text-2xl font-semibold">Book list:</h1>
+                <div class="flex flex-col px-4 mt-8">
+                   <div class="shadow overflow-hidden border-b border-gray-200 rounded">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-blue-700 rounded text-white">
+                                <tr>
+                                    <th
+                                        class="table-heading">
+                                        Title
+                                    </th>
+                                    <th
+                                        class="table-heading">
+                                        Author
+                                    </th>
+                                    <th
+                                        class="table-heading">
+                                        ISBN#
+                                    </th>
+                                    <th class="table-heading"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="book-list" class="bg-white divide-y divide-gray-200 text-sm">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
